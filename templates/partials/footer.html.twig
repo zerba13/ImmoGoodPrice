@@ -1,2 +1,34 @@
 {# footer #}
 
+<footer id="footer">
+	<div class="footer-content">
+		<div class="footer-left ">
+			<div class="footer-logo">
+				<img src="{{ asset('assets/images/logo.svg') }}" alt="ImmoGoodPrice">
+                <p>© 2024 ImmoGoodPrice. Tous droits réservés.</p>
+			</div>
+			<ul class="footer-link">
+				<li>
+					<a href="{{ path('app_accueil') }}">Accueil</a>
+				</li>
+				<li>
+					<a href="{{ path('app_carte') }}">Carte</a>
+				</li>
+				<li>
+					<a href="{{ path('app_article') }}">Articles</a>
+				</li>
+				<li>
+					<a href="{{ path('app_loi') }}">Loi & informations</a>
+				</li>
+				<li>
+					<a href="{{ path('app_contact') }}">À Contact</a>
+				</li>
+			</ul>
+		</div>
+
+		<div class="footer-right">
+			<input type="email" placeholder="Votre adresse e-mail">
+            <button type="submit">S'abonner</button>
+		</div>
+	</div>
+</footer>
