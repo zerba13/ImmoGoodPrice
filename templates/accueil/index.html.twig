@@ -11,4 +11,52 @@
 		<a href="{{ path('app_carte') }}" class="btn">Découvrir la carte</a>
 
 	</section>
+
+	<section class="rate-wrapper">
+
+		<h2>Les taux de crédit immobilier en France</h2>
+
+
+		<div class="rate-table">
+			{% for taux in tauxCredits %}
+
+				<div class="rate-card">
+					<h3>{{ taux.duree }}</h3>
+
+					<p>{{ taux.taux }}%</p>
+
+				</div>
+			{% endfor %}
+
+
+		</div>
+		<p>Dernière mise à jour :
+			{{ dateMaj|date('d/m/Y') }}</p>
+	</section>
+
+	<section class="news-wrapper">
+		<h2>Actualités immobilières</h2>
+		<div class="news-cards">
+			{% for news in newsImmo %}
+				<div class="news-card">
+					<h3>{{ news.title }}</h3>
+					<p>{{ news.content }}</p>
+					<a href="{{ news.url }}" target="_blank">Lire l'article</a>
+				</div>
+			{% endfor %}
+		</div>
+	</section>
+
+
+	<section class="about-us-wrapper">
+		<h2>ImmoGoodPrice en quelques chiffres</h2>
+		<div class="about-cards">
+			{% for chiffre in chiffresCles %}
+				<div class="about-card">
+					<h3>{{ chiffre.label }}</h3>
+					<p>{{ chiffre.valeur }}</p>
+				</div>
+			{% endfor %}
+		</div>
+	</section>
 {% endblock %}
